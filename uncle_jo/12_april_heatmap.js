@@ -9,7 +9,7 @@ var Heatmap = (function() {
     startTime: 1397260800000,
     interval: 60*60*1000,
 
-    dataFile: "/data/unique_user_counts_per_ap_per_hour_geo_2014-04-12.csv",
+    dataFile: "data/unique_user_counts_per_ap_per_hour_geo_2014-04-12.csv",
 
     tileUrl: 'https://{s}.tiles.mapbox.com/v3/polkaspots.g8m4acg0/{z}/{x}/{y}.png',
     attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>',
