@@ -1,12 +1,12 @@
 var Heatmap = (function() {
   var _this = {
-    nExponent : 1.5,
+    nExponent : 1.1,
     nScalingConstant : 1/10,
     noiseScalingConstant : 0.0002,
     noiseLimit: 0.0005,
     circleSize: 2,
-    circleColor: "#ff7200",
-    circleOpacity: 0.5,
+    circleColor: "#ccb814",
+    circleOpacity: 0.3,
     frameRate: 100,
 
     startTime: 1397260800000,
@@ -76,7 +76,7 @@ var Heatmap = (function() {
     },
 
     plotPoint: function(lat, lng, n) {
-     var nCircles = Math.floor((n^_this.nExponent)*_this.nScalingConstant)
+     var nCircles = Math.floor(Math.pow(n, _this.nExponent)*_this.nScalingConstant)
      return _.times(nCircles, function() {
         var circle = L.circle([_this.noisy(lat, n), _this.noisy(lng, n)], _this.circleSize, {
           color: null,
