@@ -5,7 +5,7 @@ var Flows = (function() {
     attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>',
 
     initialCoords: [52.922, -1.477],
-    initialZoom: 17,
+    initialZoom: 16,
     maxZoom: 25,
 
     spotColor: "#CCB714",
