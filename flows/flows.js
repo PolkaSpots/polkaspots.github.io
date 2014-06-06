@@ -4,7 +4,7 @@ var Flows = (function() {
     tileUrl: 'https://{s}.tiles.mapbox.com/v3/polkaspots.g8m4acg0/{z}/{x}/{y}.png',
     attribution: '<a href="http://polkaspots.com">Copyright PolkaSpots Limited</a>',
 
-    initialCoords: [52.9248658,-1.4779908],
+    initialCoords: [52.9247979,-1.4780159],
     initialZoom: 16,
     maxZoom: 25,
 
