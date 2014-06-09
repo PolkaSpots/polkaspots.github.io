@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Derby City Centre, 12th April 2014</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../css/polkaspots.css" type="text/css" />
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="stylesheet" href="csslibs/leaflet.css" type="text/css" />
+    <script type="text/javascript" src="jslibs/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/custom.modernizr.js"></script>
+    <script type="text/javascript" src="../js/polkaspots.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="jslibs/underscore-min.js"></script>
+    <script type="text/javascript" src="jslibs/raphael-min.js"></script>
+    <script type="text/javascript" src="jslibs/d3.min.js"></script>
+    <script type="text/javascript" src="jslibs/leaflet.js"></script>
+    <script type="text/javascript" src="jslibs/rlayer.js"></script>
+    <script type="text/javascript" src="12_april_heatmap.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <nav id="nav" class="nav-wrapper" role="navigation">
+        <div class="col-xs-6 col-sm-9">
+          <img src="../images/polkaspots.svg" height='32px'>
+        </div>
+        <div class="col-xs-12 col-sm-3 right">
+
+          <div id="nav-links">
+            <a href="http://mywifi.polkaspots.com/">Join</a>
+            <a href="../contact.html" data-toggle="modal" data-target="#myModal">Contact</a>
+          </div>
+          <a href="http://twitter.com/polkaspots"><img src="../images/twitter.svg" height='32px'></a>
+        </div>
+      </nav>
+    </div>
+    <div class="inner-container">
+      <div id="info-section">
+
+        <h3>
+          Hanging out at
+          <span id='hour'></span>
+        </h3>
+        <p>This is a map showing the increase in traffic within certain areas Derby City centre throughout the day.</p>
+        <p>The yellow points represent the volume of clients within certain areas of the City.
+        <p>The data was collected during April and May 2014.</p>
+
+      </div>
+      <div id="map"></div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Get in touch</h4>
+          </div>
+          <div class="modal-body">
+            <p><strong>You can send us a message</strong></p>
+            <ul class='list-unstyled'>
+              <li>Email: hello at polkaspots.com</li>
+              <li>Call: 020 7183 1471</li>
+            </ul>
+            <p><strong>Come visit us behind the bike sheds</strong></p>
+            <p>
+              Number 62, Britton Street
+              <br>
+              London EC1M 5UY
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
