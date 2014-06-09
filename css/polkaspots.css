@@ -79,3 +79,12 @@ a:hover, .nav>li>a:focus {
   display: inline-block;
 }
 
+#map {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
