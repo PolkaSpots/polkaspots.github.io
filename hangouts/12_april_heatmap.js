@@ -5,9 +5,9 @@ var Heatmap = (function() {
     noiseScalingConstant : 0.0002,
     noiseLimit: 0.0005,
     circleSize: 2,
-    circleColor: "#ccb814",
+    circleColor: "#fe52ab",
     circleOpacity: 0.3,
-    frameRate: 100,
+    frameRate: 750,
 
     startTime: 1397260800000,
     interval: 60*60*1000,
@@ -48,10 +48,30 @@ var Heatmap = (function() {
     },
 
     render : function() {
+      var hour = 12;
+      $("#start").click(function() {
+
+        _this.draw_it(hour, function(intervalId) {
+          _this.pause_it(intervalId)
+        })
+
+      });
+
+      _this.draw_it(hour, function(intervalId) {
+        _this.pause_it(intervalId)
+      })
+    },
+
+    pause_it : function(intervalId) {
+      $("#pause").click(function() {
+        window.clearInterval(intervalId);
+      })
+    },
+
+    draw_it : function(hour, callback) {
       var data = _this.data.slice(0);
       var points = _this.plotPoints(data.shift());
-      var hour = 0;
-      window.setInterval(function() {
+      var intervalId = window.setInterval(function() {
         _this.removePoints(points);
         points = _this.plotPoints(data.shift());
         hour += 1;
@@ -61,7 +81,9 @@ var Heatmap = (function() {
          data = _this.data.slice(0);
         }
       }, _this.frameRate)
+      callback(intervalId)
     },
+
 
     plotPoints: function(rows) {
       return _.flatten(_.map(rows, function(row) {
